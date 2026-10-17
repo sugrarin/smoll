@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleName</key>
+    <string>Smoll</string>
+    <key>CFBundleDisplayName</key>
+    <string>Smoll</string>
+    <key>CFBundleIdentifier</key>
+    <string>ee.timur.smoll</string>
+    <key>CFBundleExecutable</key>
+    <string>Smoll</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>0.1</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>LSMinimumSystemVersion</key>
+    <string>14.0</string>
+    <key>NSHighResolutionCapable</key>
+    <true/>
+    <key>CFBundleIconFile</key>
+    <string>AppIcon</string>
+    <key>NSDesktopFolderUsageDescription</key>
+    <string>Smoll replaces files with their compressed versions in place.</string>
+    <key>NSDocumentsFolderUsageDescription</key>
+    <string>Smoll replaces files with their compressed versions in place.</string>
+    <key>NSDownloadsFolderUsageDescription</key>
+    <string>Smoll replaces files with their compressed versions in place.</string>
+    <key>CFBundleDocumentTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleTypeName</key>
+            <string>Compressible files</string>
+            <key>CFBundleTypeRole</key>
+            <string>Viewer</string>
+            <key>LSHandlerRank</key>
+            <string>Alternate</string>
+            <key>LSItemContentTypes</key>
+            <array>
+                <string>public.jpeg</string>
+                <string>public.png</string>
+                <string>com.adobe.pdf</string>
+                <string>public.mpeg-4</string>
+                <string>com.apple.quicktime-movie</string>
+                <string>com.microsoft.word.doc</string>
+                <string>org.openxmlformats.wordprocessingml.document</string>
+                <string>public.rtf</string>
+                <string>com.microsoft.powerpoint.ppt</string>
+                <string>org.openxmlformats.presentationml.presentation</string>
+            </array>
+        </dict>
+    </array>
+    <key>NSServices</key>
+    <array>
+        <dict>
+            <key>NSMenuItem</key>
+            <dict>
+                <key>default</key>
+                <string>Make Smoll</string>
+            </dict>
+            <key>NSMessage</key>
+            <string>makeSmoll</string>
+            <key>NSPortName</key>
+            <string>Smoll</string>
+            <key>NSRequiredContext</key>
+            <dict/>
+            <key>NSSendFileTypes</key>
+            <array>
+                <string>public.jpeg</string>
+                <string>public.png</string>
+                <string>com.adobe.pdf</string>
+                <string>public.mpeg-4</string>
+                <string>com.apple.quicktime-movie</string>
+            </array>
+        </dict>
+        <dict>
+            <key>NSMenuItem</key>
+            <dict>
+                <key>default</key>
+                <string>Convert to PDF</string>
+            </dict>
+            <key>NSMessage</key>
+            <string>convertToPDF</string>
+            <key>NSPortName</key>
+            <string>Smoll</string>
+            <key>NSRequiredContext</key>
+            <dict/>
+            <key>NSSendFileTypes</key>
+            <array>
+                <string>com.microsoft.word.doc</string>
+                <string>org.openxmlformats.wordprocessingml.document</string>
+                <string>public.rtf</string>
+                <string>com.microsoft.powerpoint.ppt</string>
+                <string>org.openxmlformats.presentationml.presentation</string>
+            </array>
+        </dict>
+    </array>
+</dict>
+</plist>

@@ -1,0 +1,8 @@
+.DS_Store
+.build/
+dist/
+.claude/settings.local.json
+
+# made by scripts/vendor-tools.sh from Homebrew; build.sh recreates them when missing
+app/Helpers/
+app/Licenses/
