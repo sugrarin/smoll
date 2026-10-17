@@ -14,7 +14,23 @@ struct SettingsView: View {
         Binding(get: { sizePx == 0 ? nil : sizePx }, set: { sizePx = $0 ?? 0 })
     }
 
+    private var supportLink: some View {
+        HStack(spacing: 4) {
+            Text("Support me:").foregroundStyle(.secondary)
+            Link("ko-fi.com/sugrarin", destination: URL(string: "https://ko-fi.com/sugrarin")!)
+        }
+        .font(.caption)
+    }
+
     var body: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            settingsGrid
+            supportLink
+        }
+        .padding(20)
+    }
+
+    private var settingsGrid: some View {
         Grid(alignment: .leading, horizontalSpacing: 10, verticalSpacing: 12) {
             GridRow {
                 Text("Size")
@@ -80,6 +96,5 @@ struct SettingsView: View {
                 .frame(width: 280)
             }
         }
-        .padding(20)
     }
 }
